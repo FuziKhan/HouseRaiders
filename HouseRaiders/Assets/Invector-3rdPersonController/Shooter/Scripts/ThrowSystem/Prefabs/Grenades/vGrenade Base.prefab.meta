@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: f8855844f79da8b4a83bb751dc0006e9
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 123618
+  packageName: Invector FSM AI Template
+  packageVersion: 1.1.9a
+  assetPath: Assets/Invector-3rdPersonController/Shooter/Scripts/ThrowSystem/Prefabs/Grenades/vGrenade
+    Base.prefab
+  uploadId: 601882

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: a04c9098c7a452447912f6c5069bd095
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 123618
+  packageName: Invector FSM AI Template
+  packageVersion: 1.1.9a
+  assetPath: Assets/Invector-3rdPersonController/Shooter/Scripts/ThrowSystem/Prefabs/Collectables/Variants/vFragmentedGrenade_Collectable.prefab
+  uploadId: 601882
