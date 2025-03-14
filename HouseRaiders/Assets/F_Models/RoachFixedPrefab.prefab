@@ -2027,10 +2027,10 @@ GameObject:
   - component: {fileID: 6790611016651887826}
   - component: {fileID: 8693194707129128642}
   - component: {fileID: 2878605796670065104}
-  - component: {fileID: 3273485662767024244}
   - component: {fileID: 7915694225840889263}
   - component: {fileID: 4728425369652866759}
   - component: {fileID: 3703923089263079629}
+  - component: {fileID: 8973681852887389956}
   m_Layer: 9
   m_Name: RoachFixedPrefab
   m_TagString: CompanionAI
@@ -2163,7 +2163,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openCloseEvents: 0
   openCloseWindow: 1
-  selectedToolbar: 2
+  selectedToolbar: 12
   _isDead: 1
   _currentHealth: 0
   isImmortal: 0
@@ -2282,7 +2282,7 @@ MonoBehaviour:
   useNavMeshAgent: 1
   updatePathQuality: 1
   aceleration: 8
-  _stopingDistance: 1
+  _stopingDistance: 0.05
   _walkingStopingDistance: 0
   _runningStopingDistance: 0.1
   _sprintingStopingDistance: 0.15
@@ -2304,7 +2304,7 @@ MonoBehaviour:
   maxTargetsDetection: 10
   _changeTargetDelay: 2
   findTargetByDistance: 0
-  _fieldOfView: 60
+  _fieldOfView: 360
   _minDistanceToDetect: 1
   _maxDistanceToDetect: 5
   _hasPositionOfTheTarget: 0
@@ -2328,8 +2328,8 @@ MonoBehaviour:
     isLost: 0
   _secundaryTargets: []
   _debugVisualDetection: 1
-  _debugRaySight: 0
-  _debugLastTargetPosition: 0
+  _debugRaySight: 1
+  _debugLastTargetPosition: 1
   _receivedDamage:
     isValid: 0
     lastValue: 0
@@ -2344,7 +2344,7 @@ MonoBehaviour:
   _maxAttackTime: 5
   _minAttackCount: 1
   _maxAttackCount: 3
-  _attackDistance: 1.25
+  _attackDistance: 0.5
   _combatBlockingChance: 50
   _onDamageBlockingChance: 25
   _minStayBlockingTime: 4
@@ -2363,81 +2363,6 @@ MonoBehaviour:
   _isInCombat: 0
   _isAiming: 0
   _isBlocking: 0
---- !u!114 &3273485662767024244
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5977312918327913650}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c11b181c688f7664aba8ba5b38942ac9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  openCloseEvents: 0
-  openCloseWindow: 1
-  selectedToolbar: 0
-  Members:
-  - transform: {fileID: 0}
-    bodyPart: LeftLowerArm
-    attackObject: {fileID: 0}
-    isHuman: 1
-  - transform: {fileID: 0}
-    bodyPart: RightLowerArm
-    attackObject: {fileID: 0}
-    isHuman: 1
-  - transform: {fileID: 0}
-    bodyPart: LeftLowerLeg
-    attackObject: {fileID: 0}
-    isHuman: 1
-  - transform: {fileID: 0}
-    bodyPart: RightLowerLeg
-    attackObject: {fileID: 0}
-    isHuman: 1
-  defaultDamage:
-    damageValue: 10
-    staminaBlockCost: 5
-    staminaRecoveryDelay: 1
-    ignoreDefense: 0
-    activeRagdoll: 0
-    senselessTime: 0
-    sender: {fileID: 0}
-    receiver: {fileID: 0}
-    hitPosition: {x: 0, y: 0, z: 0}
-    hitReaction: 1
-    recoil_id: 0
-    reaction_id: 0
-    damageType: 
-    force: {x: 0, y: 0, z: 0}
-  hitProperties:
-    hitDamageTags:
-    - Enemy
-    useRecoil: 1
-    drawRecoilGizmos: 0
-    recoilRange: 90
-    hitRecoilLayer:
-      serializedVersion: 2
-      m_Bits: 1
-  leftWeapon: {fileID: 0}
-  rightWeapon: {fileID: 0}
-  onDamageHit:
-    m_PersistentCalls:
-      m_Calls: []
-  onRecoilHit:
-    m_PersistentCalls:
-      m_Calls: []
-  onEquipWeapon:
-    m_PersistentCalls:
-      m_Calls: []
-  onUnequipWeapon:
-    m_PersistentCalls:
-      m_Calls: []
-  defaultAttackDistance: 1
-  defaultStaminaCost: 20
-  defaultStaminaRecoveryDelay: 1
-  defaultDefenseRate: 50
-  defaultDefenseRange: 90
 --- !u!114 &7915694225840889263
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2511,6 +2436,65 @@ MonoBehaviour:
   onChangeBehaviour:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &8973681852887389956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5977312918327913650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c11b181c688f7664aba8ba5b38942ac9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  openCloseEvents: 0
+  openCloseWindow: 1
+  selectedToolbar: 0
+  Members: []
+  defaultDamage:
+    damageValue: 10
+    staminaBlockCost: 5
+    staminaRecoveryDelay: 1
+    ignoreDefense: 0
+    activeRagdoll: 0
+    senselessTime: 0
+    sender: {fileID: 0}
+    receiver: {fileID: 0}
+    hitPosition: {x: 0, y: 0, z: 0}
+    hitReaction: 1
+    recoil_id: 0
+    reaction_id: 0
+    damageType: 
+    force: {x: 0, y: 0, z: 0}
+  hitProperties:
+    hitDamageTags:
+    - Enemy
+    useRecoil: 1
+    drawRecoilGizmos: 0
+    recoilRange: 90
+    hitRecoilLayer:
+      serializedVersion: 2
+      m_Bits: 1
+  leftWeapon: {fileID: 0}
+  rightWeapon: {fileID: 0}
+  onDamageHit:
+    m_PersistentCalls:
+      m_Calls: []
+  onRecoilHit:
+    m_PersistentCalls:
+      m_Calls: []
+  onEquipWeapon:
+    m_PersistentCalls:
+      m_Calls: []
+  onUnequipWeapon:
+    m_PersistentCalls:
+      m_Calls: []
+  defaultAttackDistance: 1
+  defaultStaminaCost: 20
+  defaultStaminaRecoveryDelay: 1
+  defaultDefenseRate: 100
+  defaultDefenseRange: 90
 --- !u!1 &6168268512251794186
 GameObject:
   m_ObjectHideFlags: 0

@@ -19,6 +19,11 @@ namespace Invector.vCharacterController.AI
             MeleeManager = GetComponent<vMelee.vMeleeManager>();
         }
 
+        //private void Update()
+        //{
+        //    navMeshAgent.stoppingDistance = 1f;
+        //}
+
         public override void CreateSecondaryComponents()
         {
             base.CreateSecondaryComponents();
